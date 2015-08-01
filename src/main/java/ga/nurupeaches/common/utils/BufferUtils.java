@@ -35,4 +35,10 @@ public final class BufferUtils {
         return size;
     }
 
+    public static byte peek(ByteBuffer buffer){
+        byte b = buffer.get();
+        buffer.position(buffer.position() - 2);
+        return b;
+    }
+
 }
